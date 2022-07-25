@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RITUAL</title>
+    <link rel="shortcut icon" href="img/sombrero.jpg" type="image/x-icon">
+    <!-- Link de Bootswatch -->
+    <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
+    <!-- Links  a Css  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="container-fluid">
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a id="navbar-brand" class="navbar-brand" href="#">Ritual</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cotizaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Mi cuenta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Ayuda</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex row p-2">
+                    <button id="botonDarkMode" class="btn btn-dark">Dark Mode</button>
+                    <button id="botonLightMode" class="btn btn-light">Light Mode</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- =====================================MAIN=========================== -->
+
+    <main>
+
+        <div class="px-4 py-5 text-center fondo">
+            <h1 class="title display-5 fw-bold">RITUAL</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">Calculá cuánto equivalen tus pesos</p>
+            </div>
+        </div>
+        <!-- Formulario de ingreso de datos -->
+
+        <div class="row my-4">
+            <h2>Por favor, completá la info:</h2>
+            <form class="col-xl-6 col-md-6" id="formulario">
+                <label for="nombre" class="form-label">Nombre de usuario</label>
+                <input type="text" class="form-control" id="nombreDeUsuario" required>
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" required>
+                <label for="peso" class="form-label">Pesos que desea cambiar</label>
+                <input type="number" class="form-control" id="pesosCambio" required>
+                <label for="altura" class="form-label">Ingrese la cotizacion del Dolar</label>
+                <input type="number" class="form-control" id="cotizDolar" required>
+                <button type="submit" class="btn btnStyle my-2">Calcular</button>
+            </form>
+            <div class="col-xl-6 col-md-6">
+                <img class="img-fluid rounded" src="img/fondoCrypto.jpeg" alt="Imagen de crypto">
+            </div>
+        </div>
+
+        <!-- MUESTRO LOS DATOS -->
+        <div class="datosIngresados row">
+            <div class="row">
+                <div class="col-12 text-center" id="infoUsuarios"></div>
+            </div>
+            <button class="btn btnStyle btn-md px-4 gap-3 colorBoton m-3" id="botonIngresos"> Datos Ingresados </button>
+            <div class="row">
+                <div id="datosIngresos"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+            </a>
+            <span class="mb-3 mb-md-1 ">&copy; 2022 ritualcrypto.com</span>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <!-- link de JS de Bootstrap 5.2-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
